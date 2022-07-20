@@ -46,7 +46,6 @@ var checkImage = function (req, res, next) {
         next();
     }
     else {
-        console.error('wrong image');
         res.send('This image name was not found');
     }
 };
@@ -94,5 +93,5 @@ exports.default = {
     logger: logger,
     checkHeight: checkHeight,
     checkWidth: checkWidth,
-    checkImage: checkImage
+    checkImage: checkImage,
 };

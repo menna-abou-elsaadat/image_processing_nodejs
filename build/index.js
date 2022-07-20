@@ -12,7 +12,12 @@ var logger_1 = __importDefault(require("./utilities/logger"));
 var app = (0, express_1.default)();
 var port = 3000;
 app.get('/:image_name/:width/:height', logger_1.default.checkImage, logger_1.default.checkWidth, logger_1.default.checkHeight, logger_1.default.logger, function (req, res) {
-    res.sendFile(req.params.image_name + '_' + req.params.width + '_' + req.params.height + '.jpg', { root: './images/resized_images/' });
+    res.sendFile(req.params.image_name +
+        '_' +
+        req.params.width +
+        '_' +
+        req.params.height +
+        '.jpg', { root: './images/resized_images/' });
 });
 app.listen(port, function () {
     console.log("server started at localhost:".concat(port));

@@ -54,9 +54,15 @@ function resizeImage(image_name, width, height) {
                     return [4 /*yield*/, (0, sharp_1.default)(absolutePath)
                             .resize({
                             width: width,
-                            height: height
+                            height: height,
                         })
-                            .toFile('./images/resized_images/' + image_name + '_' + width + '_' + height + '.jpg')];
+                            .toFile('./images/resized_images/' +
+                            image_name +
+                            '_' +
+                            width +
+                            '_' +
+                            height +
+                            '.jpg')];
                 case 1:
                     _a.sent();
                     return [2 /*return*/];

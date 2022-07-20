@@ -37,5 +37,5 @@ exports.default = {
     heightIsValid: heightIsValid,
     WidthIsValid: WidthIsValid,
     validateImageExsits: validateImageExsits,
-    validateResizedImageExsits: validateResizedImageExsits
+    validateResizedImageExsits: validateResizedImageExsits,
 };
