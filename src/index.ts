@@ -15,7 +15,7 @@ app.get(
   logger.checkWidth,
   logger.checkHeight,
   logger.logger,
-  (req: express.Request, res: express.Response):void => {
+  (req: express.Request, res: express.Response): void => {
     res.sendFile(
       req.params.image_name +
         '_' +

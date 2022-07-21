@@ -2,7 +2,11 @@ import fs from 'fs-extra';
 import sharp from 'sharp';
 import path from 'path';
 
-async function resizeImage(image_name: string, width: number, height: number) {
+async function resizeImage(
+  image_name: string,
+  width: number,
+  height: number
+): Promise<void> {
   const DIR = './images/resized_images';
   fs.ensureDirSync(DIR);
   var absolutePath = path.resolve('./images/' + image_name + '.jpg');

@@ -6,7 +6,7 @@ const checkImage = function (
   req: express.Request,
   res: express.Response,
   next: express.NextFunction
-):void {
+): void {
   if (validateImage.validateImageExsits(req.params.image_name)) {
     next();
   } else {
@@ -18,7 +18,7 @@ const checkWidth = function (
   req: express.Request,
   res: express.Response,
   next: express.NextFunction
-):void {
+): void {
   const width: number = +req.params.width;
   if (validateImage.WidthIsValid(width)) {
     next();
@@ -31,7 +31,7 @@ const checkHeight = function (
   req: express.Request,
   res: express.Response,
   next: express.NextFunction
-):void {
+): void {
   const height: number = +req.params.height;
   if (validateImage.heightIsValid(height)) {
     next();
@@ -43,7 +43,7 @@ const logger = async function (
   req: express.Request,
   res: express.Response,
   next: express.NextFunction
-) {
+): Promise<void> {
   const width: number = +req.params.width;
   const height: number = +req.params.height;
   if (
